@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgree:
+    image: postgres:latest
+    container_name: postgreeServer
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: Pg@123
+
+  mariadb:
+     image: mariadb
+     ports:
+       - "3306:3306"
+     environment:
+       MYSQL_ROOT_PASSWORD: MySql@123
+       MYSQL_DATABASE: defaultdatabase
+       MYSQL_USER: User123
+       MYSQL_PASSWORD: Pwd123
+

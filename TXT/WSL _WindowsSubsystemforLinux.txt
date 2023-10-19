@@ -1,0 +1,43 @@
+WSL - Windows Subsystem for Linux
+
+O WSL permite que utilizemos qualquer distribuição do Linuxo diretamente no Windows, sem a necessidade de se instalar uma máquina virtual como Virtual Box ou similares. Assim, economizam-se recursos  
+
+- wsl --list -o - Exibe uma lista de distribuições válidas que podem ser instaladas no WSL:
+Exemplo de instalação 'wsl.exe --install Ubuntu-22.04'.
+
+NAME                                   FRIENDLY NAME
+Ubuntu                                 Ubuntu
+Debian                                 Debian GNU/Linux
+kali-linux                             Kali Linux Rolling
+Ubuntu-18.04                           Ubuntu 18.04 LTS
+Ubuntu-20.04                           Ubuntu 20.04 LTS
+Ubuntu-22.04                           Ubuntu 22.04 LTS
+OracleLinux_7_9                        Oracle Linux 7.9
+OracleLinux_8_7                        Oracle Linux 8.7
+OracleLinux_9_1                        Oracle Linux 9.1
+openSUSE-Leap-15.5                     openSUSE Leap 15.5
+SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
+SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
+openSUSE-Tumbleweed                    openSUSE Tumbleweed
+
+- wsl.exe --install Ubuntu-22.04 - O comando "wsl --install <NomeDaDistribuição>" faz o que diz.
+
+- wsl -l - Exibe a lista de WSLs instaladas:
+Distribuições do Subsistema do Windows para Linux:
+Ubuntu-22.04 (Padrão)
+
+- wsl - Inicializa o OS Linux definido como Padrão:
+root@V1N1C1U5:/mnt/c/Users/coelh#
+
+- logout - Faz o que diz.
+
+- wsl --list -v - Lista o estado e a versão das WSLs instaladas:
+  NAME            STATE           VERSION
+* Ubuntu-22.04    Running         2
+
+- wsl --shutdown - Desliga as WSL.
+
+- wsl shutdown - Agenda o shutdown para daqui a um minuto:
+Shutdown scheduled for Tue 2023-10-10 13:54:50 -03, use 'shutdown -c' to cancel.
+
+- wsl --unregister <NomeDaDistribuição> - Exclui a distribuição Linux desejada.
